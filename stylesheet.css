@@ -262,6 +262,7 @@ p {
     position: relative;
     padding:10px;
     margin-right: 1.2em;
+    box-sizing: border-box;
 }
 
 .hamburger .hamlist {
@@ -296,6 +297,25 @@ p {
     display: block;
 }
 
+.hamlistitems{
+font-family: f6-2;
+padding: 4px;
+color: white;
+}
+.toggle{
+    transition: all 0.3s ease;
+}
+.hamlist{
+
+    margin-left: -10px;
+    /* font-size: 2em; */
+    box-sizing: border-box;
+    background-color:  rgb(163, 21, 88);
+    padding: 4px;
+    z-index: 10;
+    border-radius: 5px;
+
+}
 
 /* transitions -------------------------------------------*/
 
