@@ -205,6 +205,10 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
+/* hamburger menu-------------------------------- */
+
+
+
 
 
 
@@ -251,6 +255,48 @@ p {
 }
 
 
+/* hamburger */
+
+
+.hamburger {
+    position: relative;
+    padding:10px;
+    margin-right: 1.2em;
+}
+
+.hamburger .hamlist {
+    position: absolute;
+}
+
+.hamlist {
+    list-style: none;
+    display: none;
+}
+
+#toggle {
+    display: none;
+}
+.openham{
+    cursor: pointer;
+}
+.closeham {
+    cursor: pointer;
+    display: none;
+}
+
+#toggle:checked~.hamlist {
+    display: block;
+}
+
+#toggle:checked~label .openham {
+    display: none;
+}
+
+#toggle:checked~ label .closeham {
+    display: block;
+}
+
+
 /* transitions -------------------------------------------*/
 
 
@@ -292,8 +338,15 @@ p {
 
 @media screen and (max-width:768px) {
 
-    .navlist{
+    .navlist {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:768px) {
+
+    .hamburger {
         display: none;
     }
 }
-
