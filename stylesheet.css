@@ -1,0 +1,299 @@
+@font-face {
+    font-family: 'header';
+    src: url(./assets/fonts/header.otf);
+}
+
+@font-face {
+    font-family: 'f1';
+    src: url(./assets/fonts/f1.ttf);
+}
+
+@font-face {
+    font-family: 'f2';
+    src: url(./assets/fonts/f2.otf);
+}
+
+@font-face {
+    font-family: 'f3';
+    src: url(./assets/fonts/f3.ttf);
+}
+
+@font-face {
+    font-family: 'f4';
+    src: url(./assets/fonts/f4.otf);
+}
+
+@font-face {
+    font-family: 'f5-1';
+    src: url(./assets/fonts/f5-1.ttf);
+}
+
+@font-face {
+    font-family: 'f5-2';
+    src: url(./assets/fonts/f5-2.ttf);
+}
+
+@font-face {
+    font-family: 'f6-1';
+    src: url(./assets/fonts/f6-1.ttf);
+}
+
+@font-face {
+    font-family: 'f6-2';
+    src: url(./assets/fonts/f6-2.ttf);
+}
+
+@font-face {
+    font-family: 'f7';
+    src: url(./assets/fonts/f7.ttf);
+}
+
+@font-face {
+    font-family: 'f8';
+    src: url(./assets/fonts/f8.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
+
+/* navbar------------------------------>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+.navbar {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 100px; */
+
+}
+
+
+.navlist {
+    display: flex;
+    margin-right: 2rem;
+    box-sizing: border-box;
+}
+
+
+.items {
+    box-sizing: border-box;
+    font-family: f7;
+    font-size: clamp(1.2rem, 10vw, 2rem);
+    padding: 0 1.2rem 0 1.2rem;
+}
+
+.items:hover {
+    background-color: rgb(163, 21, 88);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.items a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: clamp(1.2rem, 1vw, 2rem);
+
+}
+
+.items:hover a {
+    color: white;
+}
+
+.items a:hover {
+    text-decoration: none;
+}
+
+#flow {
+    color: rgb(14, 185, 28);
+    font-family: f2;
+    top: 1.2rem;
+    left: 30px;
+    position: absolute;
+    font-size: clamp(1.2rem, 10vw, 2rem);
+}
+
+#format {
+    position: relative;
+    font-family: f1;
+    font-size: clamp(1.2rem, 10vw, 2rem);
+    color: rgb(163, 21, 88);
+}
+
+
+
+
+
+
+
+
+/* dropdown menu-------------------------------->>>>>>>>>>>>>> */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown:hover .dropbtn {
+    color: white;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: black;
+    font-size: clamp(1.2rem, 1vw, 2rem);
+    font-family: f7;
+    position: relative;
+}
+
+.dropbtn:hover {
+    color: white;
+    border: none;
+    font-size: clamp(1.2rem, 1vw, 2rem);
+    font-family: f7;
+}
+
+.dropbtn img {
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    padding-left: 0.1rem;
+}
+
+.dropdown:hover .droplist {
+    display: block;
+}
+
+
+.dropdown:hover .droparrow {
+    transform: rotate(180deg);
+}
+
+.droplist {
+    position: absolute;
+    list-style: none;
+    display: none;
+    font-size: clamp(1.2rem, 1vw, 2rem);
+    padding: 10px;
+}
+
+.listitems {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.listitems:hover {
+    color: white;
+    background-color: rgb(163, 21, 88);
+}
+
+.listitems:hover .dropbtn {
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+
+/* cards---------------------------------
+------------------------------------------- */
+
+
+.cardcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    row-gap: 2rem;
+    margin: auto;
+    margin-top: 100px;
+    position: relative;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 80vw;
+}
+
+.cardimage {
+    min-width: 300px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.cardinfo {
+    max-width: 60%;
+}
+
+.cardinfo h1,
+p {
+    word-wrap: break-word;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+
+/* transitions -------------------------------------------*/
+
+
+.items,
+.listitems,
+.dropbtn,
+.droparrow {
+    transition: all 0.3s ease;
+}
+
+.items a:focus-visible {
+    background-color: rgb(179, 179, 179);
+    color: white;
+    padding: 5px;
+}
+
+
+
+
+
+/* media queries---------------------------------------------------------------- */
+
+
+
+
+@media screen and (max-width:600px) {
+    .cardinfo h1 {
+        font-size: clamp(8vw, 1.2em);
+    }
+
+    .card {
+        flex-wrap: wrap;
+    }
+
+    .card1 {
+        flex-wrap: wrap-reverse;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .navlist{
+        display: none;
+    }
+}
+
