@@ -339,6 +339,9 @@ p {
    padding: 2px;
    overflow: hidden;
    transform: translatex(-90%);
+    user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
 
 }
 #toggle:checked ~ body {
