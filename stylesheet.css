@@ -157,7 +157,7 @@ body {
     background: none;
     border: none;
     color: black;
-    font-size: clamp(1.2rem, 1vw, 2rem);
+    font-size: clamp(1.2rem, 1.6vw, 2rem);
     font-family: f7;
     position: relative;
 }
@@ -166,7 +166,9 @@ body {
     color: white;
     border: none;
     font-size: clamp(1.2rem, 1vw, 2rem);
-    font-family: f7;
+}
+.dropbtn:hover .droparrow{
+    filter: invert(100%);
 }
 
 .dropbtn img {
@@ -228,7 +230,7 @@ body {
     row-gap: 2rem;
     margin: auto;
     margin-top: 100px;
-    position: relative;
+    /* position: relative; */
 }
 
 .card {
@@ -237,6 +239,8 @@ body {
     align-items: center;
     box-sizing: border-box;
     width: 80vw;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .cardimage {
@@ -255,6 +259,11 @@ body {
 p {
     word-wrap: break-word;
     font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.card:hover {
+    background-color: rgb(163, 21, 88);
+    color: white;
 }
 
 
@@ -308,7 +317,7 @@ p {
 }
 
 .hamlistitems {
-    font-family: f6-2;
+    font-family: f8;
     padding: 7px;
     color: rgb(0, 0, 0);
     border-radius: 5px;
@@ -386,17 +395,76 @@ p {
 .footer {
     display: flex;
     justify-content: space-around;
-    border: 2px solid black
+    color: white;
+    background-color: rgb(163, 21, 88);
+    margin-top: 50px;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    padding-bottom: 50px;
+
 }
 
 .footerlist {
     display: flex;
+    flex-direction: column;
     list-style: none;
+    text-align: left;
+    gap: 10px;
+}
+
+.devname {
+    font-family: f2;
+}
+
+.dev {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.devemail a {
+    text-decoration: none;
+    color: white;
 }
 
 .social {
     display: flex;
 }
+
+.devlist {
+    list-style: none;
+    gap: 100px;
+
+}
+
+.copyright {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.168);
+}
+.footeritems{
+    padding: 10px;
+}
+.copypara {
+    font-size: 10px;
+    padding: 10px;
+}
+
+/* footer hover part */
+.footeritems:hover{
+color:  rgb(163, 21, 88);
+background-color: white;
+}
+
 
 /* media queries---------------------------------------------------------------- */
 
@@ -414,6 +482,43 @@ p {
     .card1 {
         flex-wrap: wrap-reverse;
     }
+    .dropbtn{
+        /* display: none; */
+        font-family: f8;
+    }
+
+    .hamdrop:hover{
+        .dropbtn{
+            display: block;
+        }
+        .droplist{
+            display: block;
+        }
+        .droparrow{
+            transform: rotate(180deg);
+            filter: invert(100%);
+        }
+        
+
+    }
+    .hamdrop:hover{
+        .droplist{
+            display: block;
+            /* flex-direction: column; */
+            z-index: 1000;
+            margin-top: 40px;
+        }
+        .droparrow{
+            margin-top: 20px;
+        }
+    }
+    
+    .listitems{
+        color:black;
+        font-family: f8;
+        
+    }
+
 
 }
 
@@ -426,4 +531,13 @@ p {
     .cardinfo h1 {
         font-size: clamp(8vw, 1.2em);
     }
+}
+
+.hamdrop{
+    position: relative;
+}
+.hamdrop .dropdown{
+    position: absolute;
+    top: -7px;
+    left: 60px;
 }
