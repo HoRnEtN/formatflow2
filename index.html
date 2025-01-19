@@ -32,20 +32,39 @@
             </div>
         </div>
 
-        <!-- hamburger -->
-        <nav class="hamburger">
-           <input type="checkbox" id="toggle">
-           <label for="toggle">
-            <img src="./assets/images/hamburgericon.png" alt="open hamburger" class="openham">
-            <img src="./assets/images/hamburgercross.png" alt="hamburger" class="closeham">
-           </label>
+        <div class="hamburger">
+            <input type="checkbox" id="toggle">
+            <label for="toggle">
+                <img src="./assets/images/hamburgericon.png" alt="hamburger" class="openham">
+                <img src="./assets/images/hamburgercross.png" alt="hamburger" class="closeham">
+            </label>
             <ul class="hamlist">
-                <li class="hamlistitems">feature1</li>
-                <li class="hamlistitems">feature2</li>
-                <li class="hamlistitems">feature3</li>
-                <li class="hamlistitems">feature4</li>
+                <li class="hamlistitems">Home</li>
+                <li class="hamlistitems">Resume</li>
+                <li class="hamlistitems">About</li>
+                <li class="hamlistitems hamdrop">Features
+                    <div class="items dropdown">
+                        <button class="dropbtn" onclick="dropFunction()"><img src="./assets/dropdown.png" class="droparrow"
+                                alt="arrow"></button>
+                        <ul class="droplist">
+                            <li class="listitems">1stfea</li>
+                            <li class="listitems">2ndfea</li>
+                            <li class="listitems">3rdfea</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- <div class="items dropdown">
+                    <button class="dropbtn" onclick="dropFunction()">More<img src="./assets/dropdown.png" class="droparrow"
+                            alt="arrow"></button>
+                    <ul class="droplist">
+                        <li class="listitems">1stfea</li>
+                        <li class="listitems">2ndfea</li>
+                        <li class="listitems">3rdfea</li>
+                    </ul>
+                </div> -->
+                
             </ul>
-        </nav>
+        </div>
     </nav>
 
 
@@ -55,7 +74,7 @@
 
     <div class="cardcontainer">
 
-        <div class="card card1">
+        <div class="card card1 c1">
             <div class="cardinfo">
                 <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos.</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repudiandae mollitia doloremque,
@@ -67,7 +86,29 @@
         </div>
 
 
-        <div class="card">
+        <div class="card c2">
+            <div class="cardcontent">
+                <img src="./assets/images/homepage.webp" class="cardimage" alt="card img">
+            </div>
+            <div class="cardinfo">
+                <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repudiandae mollitia doloremque,
+                    fugiat repellendus necessitatibus.</p>
+            </div>
+        </div>
+
+        <div class="card card1 c3">
+            <div class="cardinfo">
+                <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repudiandae mollitia doloremque,
+                    fugiat repellendus necessitatibus.</p>
+            </div>
+            <div class="cardcontent">
+                <img src="./assets/images/homepage.webp" class="cardimage" alt="card img">
+            </div>
+        </div>
+
+        <div class="card c4">
             <div class="cardcontent">
                 <img src="./assets/images/homepage.webp" class="cardimage" alt="card img">
             </div>
@@ -80,13 +121,38 @@
 
     </div>
 
-    <!-- homepage backgroung------------------------------------ -->
+    <!-- footer------------------- -->
 
-
-
-
-
-
+    <!-- social -->
+    <footer class="footer">
+        <div class="social">
+            <div class="linkedin socialicon"><img src="./assets/images/linkedinblack.png" alt="linkedin black"></div>
+            
+            <div class="github socialicon"> <img src="./assets/images/gitblack.png" alt="github black"></div>
+            
+            <div class="insta socialicon"><img src="./assets/images/instablack.png" alt="insta black"></div>
+        </div>
+        <!-- dev -->
+        <div class="dev">
+            <h1 class="devname">Sahil Nishad</h1>
+            <h6 class="devemail devdetails"><a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=example@gmail.com">Thesahilnishad@gmail.com </a>
+            </h6>
+            <h6 class="devmobile devdetails">+91 81080 54932</h6>
+            <h6 class="address devdetails">Navi Mumbai,MH, India</h6>
+        </div>
+        
+        <!-- footerlist -->
+        <ul class="footerlist">
+            <li class="footeritems">Home</li>
+            <li class="footeritems">About</li>
+            <li class="footeritems">Resume</li>
+            <li class="footeritems">Contact</li>
+        </ul>
+        <div class="copyright">
+            <p class="copypara">&copy; 2025 Sahil Nishad. All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <script src="./script.js"></script>
 </body>
