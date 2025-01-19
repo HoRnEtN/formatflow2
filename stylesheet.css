@@ -223,7 +223,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: max-content;
+    width: 80vw;
+
     row-gap: 2rem;
     margin: auto;
     margin-top: 100px;
@@ -268,7 +269,7 @@ p {
 }
 
 .hamburger .hamlist {
-    position: absolute;  
+    position: absolute;
 }
 
 
@@ -289,13 +290,13 @@ p {
     position: fixed;
     top: 10px;
     right: 20px;
-    
+
 }
 
 #toggle:checked~.hamlist {
     display: block;
-   
-    
+
+
 }
 
 #toggle:checked~label .openham {
@@ -312,10 +313,18 @@ p {
     color: rgb(0, 0, 0);
     border-radius: 5px;
     user-select: none;
-   -webkit-user-select: none;
-   -ms-user-select: none;
-    cursor:pointer;
-     outline: none; 
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.hamlistitems:focus {
+    outline: none;
+}
+
+.hamlistitems:active {
+    outline: none;
 }
 
 .toggle {
@@ -336,15 +345,16 @@ p {
     z-index: 100;
     /* border-radius: 5px; */
     flex-direction: column;
-   justify-content: center; 
-   align-items: center;
-   padding: 2px;
-   overflow: hidden;
-   transform: translatex(-90%);
-    
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    overflow: hidden;
+    transform: translatex(-90%);
+
 
 }
-#toggle:checked ~ body {
+
+#toggle:checked~body {
     overflow: hidden;
 }
 
@@ -363,7 +373,8 @@ p {
     color: white;
     padding: 5px;
 }
-.hamlistitems:hover{
+
+.hamlistitems:hover {
     background-color: rgb(163, 21, 88);
     padding: 4px;
     color: white;
@@ -372,16 +383,18 @@ p {
 
 
 /* footer=------------------------------------ */
-.footer{
+.footer {
     display: flex;
     justify-content: space-around;
-    border:2px solid black
+    border: 2px solid black
 }
-.footerlist{
+
+.footerlist {
     display: flex;
     list-style: none;
 }
-.social{
+
+.social {
     display: flex;
 }
 
@@ -392,6 +405,14 @@ p {
 
     .navlist {
         display: none;
+    }
+
+    .card {
+        flex-wrap: wrap;
+    }
+
+    .card1 {
+        flex-wrap: wrap-reverse;
     }
 
 }
@@ -405,14 +426,4 @@ p {
     .cardinfo h1 {
         font-size: clamp(8vw, 1.2em);
     }
-
-    .card {
-        flex-wrap: wrap;
-    }
-
-    .card1 {
-        flex-wrap: wrap-reverse;
-    }
-
-
 }
