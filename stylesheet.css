@@ -311,6 +311,10 @@ p {
     padding: 7px;
     color: rgb(0, 0, 0);
     border-radius: 5px;
+    user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+    cursor:pointer;
     
     
     
@@ -339,9 +343,7 @@ p {
    padding: 2px;
    overflow: hidden;
    transform: translatex(-90%);
-    user-select: none;
-   -webkit-user-select: none;
-   -ms-user-select: none;
+    
 
 }
 #toggle:checked ~ body {
